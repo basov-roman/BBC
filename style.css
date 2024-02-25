@@ -1,0 +1,309 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header {
+  animation: fadeIn 300ms ease-in-out;
+}
+
+.navigation-wrapper,
+.logo-wrapper,
+.footer-wrapper {
+  padding: 0 255.6px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  background-color: rgb(184, 0, 0);
+}
+
+.logo-wrapper > a {
+  position: relative;
+}
+
+.logo-wrapper > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.logo-wrapper > a:hover::after {
+  transform: scaleX(1);
+}
+
+#brandSvgHeader path {
+  fill: white;
+}
+
+.navigation-wrapper > ul {
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+
+.navigation-wrapper {
+  > ul {
+    > li {
+      list-style-type: none;
+    }
+  }
+}
+
+.menu-button {
+  display: none;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: rgb(211, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+  background-color: rgb(131, 0, 0);
+}
+
+.navigation-wrapper > ul > li > a {
+  padding: 4px 12px;
+  text-decoration: none;
+  font-weight: 400;
+  color: rgb(20, 20, 20);
+}
+
+.navigation-wrapper > ul > li > a:hover {
+  border-bottom: 4px solid rgb(184, 0, 0);
+  padding-bottom: 10px;
+}
+
+main {
+  animation: fadeIn 500ms ease-in-out;
+  padding: 0 271.6px;
+  display: flex;
+  gap: 20px;
+}
+
+.main-content {
+  width: 66%;
+}
+
+.main-content > h1 {
+  padding: 40px 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+.publicity-time {
+  margin-bottom: 40px;
+}
+
+.publicity-time > time {
+  font-size: 13px;
+  color: rgb(84, 86, 88);
+}
+
+.dish-picture {
+  margin-bottom: 24px;
+}
+
+.dish-picture > img {
+  width: 100%;
+  height: auto;
+}
+
+.main-content > p {
+  margin: 0 40px 24px 0;
+  line-height: 1.375rem;
+}
+
+.main-link {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(184, 0, 0);
+}
+
+.main-link:hover {
+  color: rgb(184, 0, 0);
+  border-bottom: 2px solid rgb(184, 0, 0);
+}
+
+.traditional-recipe {
+  position: relative;
+  left: 30px;
+  padding-left: 10px;
+}
+
+.traditional-recipe:before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+}
+
+.ingredients {
+  padding-left: 40px;
+}
+
+.ingredients > li {
+  margin-bottom: 16px;
+}
+
+aside {
+  width: 33%;
+  margin-top: 32px;
+}
+
+.articles {
+  padding: 16px;
+}
+
+.articles > p {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+.articles > article {
+  margin-bottom: 24px;
+}
+
+.articles > article > h3 {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.articles > article > h3 > a {
+  color: black;
+  text-decoration: none;
+}
+
+.articles > article > time {
+  font-size: 0.8125rem;
+  color: rgb(84, 86, 88);
+}
+
+.footer-wrapper {
+  background-color: rgb(34, 34, 34);
+}
+
+.footer-wrapper > p {
+  padding: 16px 0;
+  font-size: 13px;
+  color: white;
+}
+
+.footer-wrapper > p > a {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-wrapper > p > a:hover {
+  border-bottom: 1px solid white;
+}
+
+@media (max-width: 1100px) {
+  .navigation-wrapper,
+  .logo-wrapper,
+  .footer-wrapper {
+    padding: 0 70px;
+  }
+
+  main {
+    padding: 0 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  .navigation-wrapper {
+    justify-content: center;
+  }
+
+  .navigation-wrapper > ul {
+    display: none;
+  }
+
+  .menu-items.active {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .navigation-wrapper,
+  .logo-wrapper,
+  .footer-wrapper {
+    padding: 0 30px;
+  }
+
+  main {
+    padding: 0 30px;
+  }
+
+  .main-content > h1 {
+    padding: 10px 0;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 426px) {
+  .navigation-wrapper,
+  .logo-wrapper,
+  .footer-wrapper {
+    padding: 0 5px;
+  }
+
+  main {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 375.2px) {
+  .logo-wrapper > a {
+    width: 100%;
+  }
+
+  #brandSvgHeader {
+    transform: scale(0.4);
+  }
+}
